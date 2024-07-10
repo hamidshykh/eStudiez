@@ -1,0 +1,206 @@
+/* this side for nav items */
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #db4a8e;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+  
+
+#myDIV{
+    display: none;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: auto;
+    }
+    li a {
+      display: block;
+      color: white;
+      padding: 8px 16px;
+      text-decoration: none;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      margin-top: 10px;
+      text-align: center;
+      font-size:20px;
+      font-weight: bold;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    li a:hover {
+      background-color: #555;
+      color: white;
+      text-decoration: none;
+    }
+    html {
+        font-size: 16px;
+        font-family: Arial;
+    }
+    header {
+        border-bottom: 1px solid #eee;
+        height: 4rem;
+    }
+    .burger-wrapper {
+      cursor: pointer;
+    }
+    #meny {
+        width: 20%;
+        background-color:rgba(0,0,0,0.5);
+        position: fixed;
+        right: 0px;
+        bottom: 0px; 
+        height: 90%;
+        transition-timing-function: cubic-bezier(10,2,3,1);
+        transform: translateX(50rem);
+        z-index: 0;
+        transition: 0.5s;
+    }
+    /* @media only screen and (max-width: 1272px){  */
+        @media (max-width: 991.98px) {
+        #meny {
+            width: 100%;
+            transition-timing-function: cubic-bezier(10,2,3,1);
+            transform: translateX(100rem);
+            z-index: 0;
+            transition: 0.5s;
+        }
+    }
+    @media (max-width: 991.98px) {
+        .ftco-navbar-light {
+          background: linear-gradient(#db4a8e, #007bff) !important; 
+          color: black;                             /*This side*/
+          position: relative;
+          top: 0;
+          padding-top: 0;
+          width: 100%;   /* Extra editing */
+          padding-bottom: 0; } }
+    #menyAvPaa {
+        display: none;
+    }
+
+    #menyAvPaa:checked ~ #meny {
+        transform: translateX(0rem);
+    }
+
+    #burger {
+        position: absolute;
+        cursor: pointer;
+        width: 2rem;
+        height: 1.50rem;
+        right: 1rem;
+        top: 1rem;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .username_side{
+        background-color: #000;
+        width: 100%;        
+        padding-top: 20px;
+        padding-bottom: 8px;
+        text-align: center;
+        color:white; 
+        cursor: pointer;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 20px;
+        /* margin:0px 0px 25px; */
+    }
+    .fas{
+        position: absolute;
+        left: 5px;
+        top: 23px;
+
+    }
+    .username_side:hover{
+        background: linear-gradient(#db4a8e, #007bff) !important; 
+    }   
+     
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #007bff;
+    min-width: 100%;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+  
+  .dropdown a:hover {background-color: #ddd;}
+  
+  .show {display: block;}
+
+    #burger > div {
+        height: 2px;
+        background-color: #000;
+        transition: 0.5s;
+        z-index: 999;
+    }
+
+    #menyAvPaa:checked ~ #burger > div {
+      background-color: black;
+    }
+
+    #menyAvPaa:checked ~ #burger > div:nth-child(1) {
+        transform: translateY(15px) rotate(45deg);
+    }
+    #menyAvPaa:checked ~ #burger > div:nth-child(2) {
+        opacity: 0;
+    }
+    #menyAvPaa:checked ~ #burger > div:nth-child(3) {
+        transform: translateY(-15px) rotate(-45deg);
+    }
+
+    /* this side for nav items  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

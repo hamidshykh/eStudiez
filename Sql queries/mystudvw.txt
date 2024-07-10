@@ -1,0 +1,6 @@
+CREATE VIEW mystud AS
+SELECT teacher.ID,teacher.FullName AS tName,studtbl.FullName AS StudName,studtbl.Email,studtbl.image,studtbl.Verify_code,addcategory.CName
+FROM checkout
+INNER JOIN teacher ON teacher.ID=checkout.TeacherID
+INNER JOIN studtbl ON checkout.ApplierID=studtbl.ID
+INNER JOIN addcategory ON checkout.CategoryID=addcategory.ID;

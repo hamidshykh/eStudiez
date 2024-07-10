@@ -1,0 +1,5 @@
+CREATE VIEW catname AS
+SELECT upcourse.ID, upcourse.Name,upcourse.image_name,upcourse.Descript,upcourse.Price,upcourse.Active,addcategory.CName,teacher.FullName
+FROM upcourse
+INNER JOIN addcategory ON upcourse.Category_Id=addcategory.ID
+INNER JOIN teacher ON upcourse.TeacherID=teacher.ID;

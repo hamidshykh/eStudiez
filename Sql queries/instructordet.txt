@@ -1,0 +1,4 @@
+CREATE VIEW instructDet AS 
+SELECT teacher.ID,teacher.FullName,teacher.image_name,addcategory.CName
+FROM teacher
+LEFT JOIN addcategory ON teacher.CategoryID=addcategory.ID;

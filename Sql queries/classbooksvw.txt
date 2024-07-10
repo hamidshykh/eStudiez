@@ -1,0 +1,10 @@
+CREATE VIEW classbook AS
+SELECT
+studtbl.ID,checkout.Name,checkout.Email,
+textbook.Title,textbook.Desc,textbook.Upload,
+addcategory.CName
+FROM checkout
+LEFT JOIN studtbl ON studtbl.ID=checkout.ApplierID
+LEFT JOIN upcourse ON upcourse.ID=checkout.CourseID
+LEFT JOIN addcategory ON upcourse.Category_Id=addcategory.ID
+LEFT JOIN textbook ON textbook.CategoryID=addcategory.ID;

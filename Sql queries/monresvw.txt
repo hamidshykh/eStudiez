@@ -1,0 +1,5 @@
+CREATE VIEW result AS
+SELECT monmarks.ID,monmarks.TestID,monmarks.Desc,monmarks.Date,monmarks.Marks,monmarks.RollNo,
+teacher.FullName,teacher.Email
+FROM monmarks
+LEFT JOIN teacher ON monmarks.TCode=teacher.TCode;

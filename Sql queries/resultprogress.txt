@@ -1,0 +1,5 @@
+CREATE VIEW progress AS
+SELECT yermarks.ID,yermarks.Descript,yermarks.RollNo,yermarks.ObtainMarks,yermarks.TotalMarks,
+teacher.FullName,teacher.Email
+FROM yermarks
+LEFT JOIN teacher ON yermarks.TCode=teacher.TCode;

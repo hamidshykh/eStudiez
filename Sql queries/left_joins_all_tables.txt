@@ -1,0 +1,7 @@
+CREATE VIEW mycourse AS 
+SELECT checkout.ID,studtbl.FullName,studtbl.Verify_code,upcourse.Name UpTitle,upcourse.image_name,upcourse.Descript,upcourse.Active,teacher.FullName As TName, teacher.image_name AS Timg, teacher.Email AS TEmail,addcategory.CName
+FROM checkout
+INNER JOIN studtbl ON checkout.ApplierID=studtbl.ID
+INNER JOIN upcourse ON checkout.CourseID=upcourse.ID
+INNER JOIN teacher ON checkout.TeacherID=teacher.ID
+INNER JOIN addcategory ON checkout.CategoryID=addcategory.ID;

@@ -1,0 +1,10 @@
+CREATE VIEW myclass AS
+SELECT
+checkout.ID,checkout.Name,checkout.Email,
+activeclass.Title,activeclass.VDesc,activeclass.video,
+addcategory.CName
+FROM checkout
+LEFT JOIN studtbl ON studtbl.ID=checkout.ApplierID
+LEFT JOIN upcourse ON upcourse.ID=checkout.CourseID
+LEFT JOIN addcategory ON upcourse.Category_Id=addcategory.ID
+LEFT JOIN activeclass ON activeclass.CategoryID=addcategory.ID;
